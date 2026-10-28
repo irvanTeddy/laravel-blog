@@ -17,9 +17,17 @@
                     @enderror
                 </div>
 
-                <div class="mb-4">
+                <div class="mb-3">
                     <label for="password" class="form-label fw-semibold">Password</label>
                     <input type="password" name="password" id="password" class="form-control rounded-3" required placeholder="••••••••">
+                </div>
+
+                <!-- Cloudflare Turnstile Widget -->
+                <div class="mb-3">
+                    <div class="cf-turnstile" data-sitekey="{{ env('TURNSTILE_SITE_KEY') }}"></div>
+                    @error('captcha')
+                    <div class="text-danger small mt-1" style="color: red;">{{ $message }}</div>
+                    @enderror
                 </div>
 
                 <button type="submit" class="btn btn-dark w-100 rounded-pill py-2 fw-semibold">Masuk Mas Bro</button>
@@ -27,4 +35,7 @@
         </div>
     </div>
 </div>
+
+<!-- Script Cloudflare Turnstile -->
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 @endsection
