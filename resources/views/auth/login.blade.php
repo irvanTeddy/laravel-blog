@@ -11,7 +11,7 @@
 
                 <div class="mb-3">
                     <label for="email" class="form-label fw-semibold">Email</label>
-                    <input type="email" name="email" id="email" class="form-control rounded-3 @error('email') is-invalid @enderror" value="{{ old('email') }}" required placeholder="admin@email.com">
+                    <input type="email" name="email" id="email" class="form-control rounded-3 @error('email') is-invalid @enderror" value="{{ old('email') }}" required placeholder="Enter Email mu bro...">
                     @error('email')
                     <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
@@ -19,7 +19,7 @@
 
                 <div class="mb-3">
                     <label for="password" class="form-label fw-semibold">Password</label>
-                    <input type="password" name="password" id="password" class="form-control rounded-3" required placeholder="••••••••">
+                    <input type="password" name="password" id="password" class="form-control rounded-3" required placeholder="Password ? YTTA ">
                 </div>
 
                 <!-- Cloudflare Turnstile Widget -->
